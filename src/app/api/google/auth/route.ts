@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID!;
 const REDIRECT_URI = process.env.GOOGLE_REDIRECT_URI || `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/google/callback`;
 const SCOPES = [
-  'https://www.googleapis.com/auth/calendar.readonly',
+  'https://www.googleapis.com/auth/calendar',
   'openid',
   'email',
   'profile',

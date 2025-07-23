@@ -19,6 +19,7 @@ import {
   NewspaperIcon,
 } from "@heroicons/react/24/outline";
 import { Bars3Icon } from "@heroicons/react/20/solid";
+import Image from "next/image";
 
 export const navigation = [
   { name: "Calendar", href: "/calendar", icon: CalendarIcon },
@@ -70,9 +71,11 @@ export default function Sidebar() {
               </TransitionChild>
               <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 ring-1 ring-white/10">
                 <div className="flex h-16 shrink-0 items-center">
-                  <img
+                  <Image
                     alt="Dashboard Logo"
                     src="/logo.png"
+                    width={32}
+                    height={32}
                     className="h-8 w-auto"
                   />
                 </div>
@@ -116,9 +119,11 @@ export default function Sidebar() {
             "flex h-16 shrink-0 items-center w-full",
             collapsed ? "justify-center" : "justify-between"
           )}>
-            <img
+            <Image
               alt="Dashboard Logo"
               src="/logo.png"
+              width={32}
+              height={32}
               className={classNames("h-8 transition-all duration-300", collapsed ? "w-8" : "w-auto")}
             />
             <button
